@@ -1,0 +1,10 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+<a href="{% url 'tareas' %}"> volver</a>
+<form method="post" >  
+    {% csrf_token %}
+
+    <p>Vas a eleminar esta tarea:{{tarea}} </p>
+    <input type="submit" value="eliminar">
+</form>
+{% endblock content %}
